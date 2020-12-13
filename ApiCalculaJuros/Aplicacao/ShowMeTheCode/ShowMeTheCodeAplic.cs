@@ -16,8 +16,8 @@ namespace ApiCalculaJuros.Aplicacao.ShowMeTheCode
         {
             return new UrlGitHubView
             {
-                ApiTaxaJuros = new UrlGitHubItemView("ApiTaxaJuros", _configuration.GetValue<string>("UrlGitHubApiTaxaJuros")),
-                ApiCalculaJuros = new UrlGitHubItemView("ApiTaxaJuros", _configuration.GetValue<string>("UrlGitHubApiCalculaJuros"))
+                ApiTaxaJuros = _configuration["UrlGitHubApiTaxaJuros"],
+                ApiCalculaJuros = _configuration["UrlGitHubApiCalculaJuros"]
             };
         }
     }

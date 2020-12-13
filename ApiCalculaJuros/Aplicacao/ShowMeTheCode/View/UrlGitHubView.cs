@@ -3,7 +3,7 @@ namespace ApiCalculaJuros.Aplicacao.ShowMeTheCode.View
 {
     public class UrlGitHubView
     {
-        public UrlGitHubItemView ApiTaxaJuros { get; set; }
-        public UrlGitHubItemView ApiCalculaJuros { get; set; }
+        public string ApiTaxaJuros { get; set; }
+        public string ApiCalculaJuros { get; set; }
     }    
 }
