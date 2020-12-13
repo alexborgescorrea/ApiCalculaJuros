@@ -20,7 +20,7 @@ namespace ApiCalculaJuros.Controllers
         }
 
         [HttpGet]
-        public UrlGitHubView CalcularAsync()
+        public UrlGitHubView GetUrlGitGub()
         {
             return _showMeTheCodeAplic.GetUrlGitGub();
         }
