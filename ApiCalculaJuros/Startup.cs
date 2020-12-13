@@ -1,3 +1,4 @@
+using ApiCalculaJuros.Aplicacao.CalculaJuros;
 using ApiCalculaJuros.Aplicacao.TaxaJuros;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,7 +27,8 @@ namespace ApiCalculaJuros
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton(Configuration);
+            ConfigInjecao(services);
+            services.AddSingleton(Configuration);           
             services.AddHttpClient();
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -37,7 +39,8 @@ namespace ApiCalculaJuros
 
         private void ConfigInjecao(IServiceCollection services)
         {
-            services.AddScoped<ITaxaJurosAplic, TaxaJurosAplic>();            
+            services.AddScoped<ITaxaJurosAplic, TaxaJurosAplic>();
+            services.AddScoped<ICalculaJurosAplic, CalculaJurosAplic>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
