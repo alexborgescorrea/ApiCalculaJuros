@@ -33,8 +33,7 @@ namespace ApiCalculaJuros.Aplicacao.TaxaJuros
 
         private Uri GetUrl()
         {
-            return new Uri(_configuration["UrlApiTaxaJuros"]);
-            //return new Uri(_configuration.GetValue<string>("UrlApiTaxaJuros"));
+            return new Uri(_configuration["UrlApiTaxaJuros"]);            
         }
     }
 }
