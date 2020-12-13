@@ -20,7 +20,7 @@ namespace ApiCalculaJuros.Controllers
         }
 
         [HttpGet]        
-        public async Task<decimal> Calcular([FromQuery]CalculaJurosDto dto)
+        public async Task<decimal> CalcularAsync([FromQuery]CalculaJurosDto dto)
         {
             return await _calculaJurosAplic.CalcularAsync(dto);
         }
