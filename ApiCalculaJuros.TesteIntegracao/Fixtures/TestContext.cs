@@ -26,17 +26,9 @@ namespace ApiCalculaJuros.TesteIntegracao.Fixtures
 
             _server = new TestServer(new WebHostBuilder().UseStartup<Startup>()
                                                          .UseConfiguration(new ConfigurationBuilder()        
-                                                         .AddJsonFile("appsettings.test.json")
+                                                         .AddJsonFile("appsettings.json")                                                         
                                                          .Build()));
             Client = _server.CreateClient();
-        }
-
-        private static IConfiguration InitConfiguration()
-        {
-            var config = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.test.json")
-                .Build();
-            return config;
-        }
+        }        
     }
 }
