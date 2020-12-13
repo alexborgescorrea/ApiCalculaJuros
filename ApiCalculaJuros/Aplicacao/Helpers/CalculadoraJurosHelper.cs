@@ -9,7 +9,9 @@ namespace ApiCalculaJuros.Aplicacao.Helpers
     {
         public static decimal Calcular(decimal valorInicial, int meses, decimal juros)
         {
-            return 0;
+            var valorJuros = (double)valorInicial * Math.Pow((1 + (double)juros), meses);
+
+            return decimal.Truncate((decimal)valorJuros * 100m) / 100;
         }
     }
 }
