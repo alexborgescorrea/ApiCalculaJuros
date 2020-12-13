@@ -1,4 +1,5 @@
 using ApiCalculaJuros.Aplicacao.CalculaJuros;
+using ApiCalculaJuros.Aplicacao.ShowMeTheCode;
 using ApiCalculaJuros.Aplicacao.TaxaJuros;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -41,6 +42,7 @@ namespace ApiCalculaJuros
         {
             services.AddScoped<ITaxaJurosAplic, TaxaJurosAplic>();
             services.AddScoped<ICalculaJurosAplic, CalculaJurosAplic>();
+            services.AddScoped<IShowMeTheCodeAplic, ShowMeTheCodeAplic>();            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
