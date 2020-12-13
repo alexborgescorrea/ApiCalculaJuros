@@ -16,12 +16,15 @@ namespace ApiCalculaJuros.Test.Controller
         [Fact]
         public async Task CalcularAsync_TesteValorCorreto()
         {            
+            //arrange
             var mockCalculaJurosAplic = new Mock<ICalculaJurosAplic>();
             mockCalculaJurosAplic.Setup(p => p.CalcularAsync(It.IsAny<CalculaJurosDto>())).ReturnsAsync(100m);            
 
+            //act
             var calculaJurosController = new CalculaJurosController(mockCalculaJurosAplic.Object);
             var valorAtual = await calculaJurosController.CalcularAsync(new CalculaJurosDto());
 
+            //test
             Assert.Equal(100m, valorAtual);
         }
     }
