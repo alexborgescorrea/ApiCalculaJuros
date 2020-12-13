@@ -8,7 +8,7 @@ using System.Text.Json;
 
 namespace ApiCalculaJuros.Aplicacao.TaxaJuros
 {
-    public class TaxaJurosAplic
+    public class TaxaJurosAplic : ITaxaJurosAplic
     {
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly IConfiguration _configuration;
